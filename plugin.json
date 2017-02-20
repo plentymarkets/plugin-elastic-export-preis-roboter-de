@@ -1,0 +1,13 @@
+{
+  "name": "ElasticExportPreisRoboterDE",
+  "description": "This plugin adds the format PreisRoboterDE to the Elastic Export.",
+  "namespace": "ElasticExportPreisRoboterDE",
+  "author": "plentymarkets",
+  "type": "export",
+  "serviceProvider": "ElasticExportPreisRoboterDE\\ElasticExportPreisRoboterDEServiceProvider",
+  "version": 0.1,
+  "require":
+  {
+    "ElasticExportCore": 0.1
+  }
+}
