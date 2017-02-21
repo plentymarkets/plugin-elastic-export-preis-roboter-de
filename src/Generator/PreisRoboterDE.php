@@ -2,7 +2,7 @@
 
 namespace ElasticExportPreisRoboterDE\Generator;
 
-use ElasticExportCore\Helper\ElasticExportCoreHelper;
+use ElasticExport\Helper\ElasticExportCoreHelper;
 use Plenty\Modules\DataExchange\Contracts\CSVGenerator;
 use Plenty\Modules\DataExchange\Models\FormatSetting;
 use Plenty\Modules\Helper\Services\ArrayHelper;
