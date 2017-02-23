@@ -18,7 +18,7 @@ class ElasticExportPreisRoboterDEServiceProvider extends DataExchangeServiceProv
             'PreisRoboterDE-Plugin',
             'ElasticExportPreisRoboterDE\ResultField\PreisRoboterDE',
             'ElasticExportPreisRoboterDE\Generator\PreisRoboterDE',
-            'ElasticExportPreisRoboterDE\Filter\PreisRoboterDE',
+            '',
             true
         );
     }
