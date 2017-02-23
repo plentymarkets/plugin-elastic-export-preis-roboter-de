@@ -2,11 +2,11 @@
 
 namespace ElasticExportPreisRoboterDE\Filter;
 
-use Plenty\Modules\DataExchange\Contracts\FiltersForElasticSearchContract;
+use Plenty\Modules\DataExchange\Contracts\FiltersForElasticSearch;
 
 use Plenty\Plugin\Application;
 
-class PreisRoboterDE extends FiltersForElasticSearchContract
+class PreisRoboterDE extends FiltersForElasticSearch
 {
     /**
      * @var Application $app
