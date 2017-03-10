@@ -1,5 +1,8 @@
 # Release Notes for Elastic Export PreisRoboter.de
 
+## v1.0.3 (2017-03-10)
+- Adjusted image size
+
 ## v1.0.2 (2017-03-03)
 - Adjustment for the ResultField, so the imageMutator does not affect the image outcome anymore if the referrer "ALL" is set
 
