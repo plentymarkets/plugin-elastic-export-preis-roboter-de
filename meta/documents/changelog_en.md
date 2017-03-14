@@ -1,5 +1,13 @@
 # Release Notes for Elastic Export PreisRoboter.de
 
+## v1.0.4 (2017-03-13)
+
+### Added
+- Added marketplace name.
+
+### Changed
+- Changed plugin icons.
+
 ## v1.0.3 (2017-03-10)
 - Adjusted image size
 

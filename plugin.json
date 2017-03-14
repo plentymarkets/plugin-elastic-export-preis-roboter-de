@@ -16,5 +16,9 @@
   "categories": [
     "3523"
   ],
-  "version": "1.0.3"
+  "version": "1.0.4",
+  "marketplaceName": {
+    "de":"preisroboter.de",
+    "en":"preisroboter.de"
+  }
 }
