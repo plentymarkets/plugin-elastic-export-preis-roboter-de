@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
+## v1.0.6 (2017-05-24)
+
+### Geändert
+- Das Plugin Elastic Export ist nun Voraussetzung zur Nutzung des Pluginformats PreisRoboterDE.
+
 ## v1.0.5 (2017-03-22)
 
 ### Behoben
