@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
+## v1.0.7 (2017-07-03)
+
+### Geändert
+- Die Voraussetzung für das Plugin wurde angepasst.
+
 ## v1.0.6 (2017-05-24)
 
 ### Geändert
