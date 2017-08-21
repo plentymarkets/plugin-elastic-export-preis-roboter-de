@@ -70,7 +70,7 @@ The following table lists details for settings, format settings and recommended 
             Markets
         </td>
         <td>
-            Choose one or multiple order referrer. The chosen order referrer has to be active at the variation for the item to be exported.
+            Choose one or multiple order referrers. The chosen order referrer has to be active at the variation for the item to be exported.
         </td>        
     </tr>
     <tr>
