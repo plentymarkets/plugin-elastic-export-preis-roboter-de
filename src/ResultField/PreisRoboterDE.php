@@ -5,8 +5,10 @@ namespace ElasticExportPreisRoboterDE\ResultField;
 use Plenty\Modules\DataExchange\Contracts\ResultFields;
 use Plenty\Modules\DataExchange\Models\FormatSetting;
 use Plenty\Modules\Helper\Services\ArrayHelper;
+use Plenty\Modules\Item\Search\Mutators\BarcodeMutator;
 use Plenty\Modules\Item\Search\Mutators\ImageMutator;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Mutator\BuiltIn\LanguageMutator;
+use Plenty\Modules\Item\Search\Mutators\KeyMutator;
 use Plenty\Modules\Item\Search\Mutators\SkuMutator;
 use Plenty\Modules\Item\Search\Mutators\DefaultCategoryMutator;
 
@@ -53,7 +55,9 @@ class PreisRoboterDE extends ResultFields
         {
             $itemDescriptionFields[] = 'texts.description';
         }
+
         $itemDescriptionFields[] = 'texts.technicalData';
+		$itemDescriptionFields[] = 'texts.lang';
 
         //Mutator
         /**
@@ -68,14 +72,7 @@ class PreisRoboterDE extends ResultFields
          * @var LanguageMutator $languageMutator
          */
         $languageMutator = pluginApp(LanguageMutator::class, [[$settings->get('lang')]]);
-        /**
-         * @var SkuMutator $skuMutator
-         */
-        $skuMutator = pluginApp(SkuMutator::class);
-        if($skuMutator instanceof SkuMutator)
-        {
-            $skuMutator->setMarket($reference);
-        }
+
         /**
          * @var DefaultCategoryMutator $defaultCategoryMutator
          */
@@ -84,6 +81,26 @@ class PreisRoboterDE extends ResultFields
         {
             $defaultCategoryMutator->setPlentyId($settings->get('plentyId'));
         }
+
+		/**
+		 * @var BarcodeMutator $barcodeMutator
+		 */
+		$barcodeMutator = pluginApp(BarcodeMutator::class);
+		if($barcodeMutator instanceof BarcodeMutator)
+		{
+			$barcodeMutator->addMarket($reference);
+		}
+
+		/**
+		 * @var KeyMutator
+		 */
+		$keyMutator = pluginApp(KeyMutator::class);
+
+		if($keyMutator instanceof KeyMutator)
+		{
+			$keyMutator->setKeyList($this->getKeyList());
+			$keyMutator->setNestedKeyList($this->getNestedKeyList());
+		}
 
         $fields = [
             [
@@ -95,6 +112,7 @@ class PreisRoboterDE extends ResultFields
                 'id',
                 'variation.availability.id',
                 'variation.model',
+				'variation.stockLimitation',
 
                 //images
                 'images.all.urlMiddle',
@@ -122,24 +140,19 @@ class PreisRoboterDE extends ResultFields
                 'unit.content',
                 'unit.id',
 
-                //sku
-                'skus.sku',
-
                 //defaultCategories
                 'defaultCategories.id',
 
                 //barcodes
                 'barcodes.code',
                 'barcodes.type',
-
-                //attributes
-                'attributes.attributeValueSetId',
             ],
 
             [
                 $languageMutator,
-                $skuMutator,
-                $defaultCategoryMutator
+                $defaultCategoryMutator,
+				$barcodeMutator,
+				$keyMutator
             ],
         ];
 
@@ -155,4 +168,99 @@ class PreisRoboterDE extends ResultFields
 
         return $fields;
     }
+
+	/**
+	 * @return array
+	 */
+	private function getKeyList()
+	{
+		return [
+			// Item
+			'item.id',
+			'item.manufacturer.id',
+
+			// Variation
+			'variation.availability.id',
+			'variation.model',
+			'variation.stockLimitation',
+
+			// Unit
+			'unit.content',
+			'unit.id',
+		];
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getNestedKeyList()
+	{
+		return [
+			'keys' => [
+				// Barcodes
+				'barcodes',
+
+				// Default categories
+				'defaultCategories',
+
+				// Images
+				'images.all',
+				'images.item',
+				'images.variation',
+
+				// Texts
+				'texts',
+			],
+
+			'nestedKeys' => [
+				// Barcodes
+				'barcodes' => [
+					'code',
+					'type'
+				],
+
+				// Default categories
+				'defaultCategories' => [
+					'id'
+				],
+
+				// Images
+				'images.all' => [
+					'urlMiddle',
+					'urlPreview',
+					'urlSecondPreview',
+					'url',
+					'path',
+					'position',
+				],
+				'images.item' => [
+					'urlMiddle',
+					'urlPreview',
+					'urlSecondPreview',
+					'url',
+					'path',
+					'position',
+				],
+				'images.variation' => [
+					'urlMiddle',
+					'urlPreview',
+					'urlSecondPreview',
+					'url',
+					'path',
+					'position',
+				],
+
+				// texts
+				'texts' => [
+					'urlPath',
+					'name1',
+					'name2',
+					'name3',
+					'shortDescription',
+					'description',
+					'technicalData',
+				],
+			]
+		];
+	}
 }
