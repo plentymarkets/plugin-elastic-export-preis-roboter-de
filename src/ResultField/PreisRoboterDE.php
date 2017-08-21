@@ -151,7 +151,8 @@ class PreisRoboterDE extends ResultFields
             [
                 $languageMutator,
                 $defaultCategoryMutator,
-				$barcodeMutator
+				$barcodeMutator,
+				$keyMutator
             ],
         ];
 

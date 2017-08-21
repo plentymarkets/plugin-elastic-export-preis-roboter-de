@@ -1,6 +1,6 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
-## v1.0.8 (2017-08-17)
+## v1.0.8 (2017-08-21)
 
 ### Geändert
 - Das Formatplugin basiert nun nur noch auf Elastic Search.

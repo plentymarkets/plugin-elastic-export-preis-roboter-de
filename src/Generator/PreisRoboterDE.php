@@ -43,6 +43,11 @@ class PreisRoboterDE extends CSVPluginGenerator
      */
     private $arrayHelper;
 
+	/**
+	 * @var array
+	 */
+    private $deliveryCostCache;
+
     /**
      * PreisRoboterDE constructor.
      * @param ArrayHelper $arrayHelper
@@ -91,16 +96,16 @@ class PreisRoboterDE extends CSVPluginGenerator
 					]);
 				}
 
-				foreach($resultList['documents'] as $variation)
+				if(is_array($resultList['documents']) && count($resultList['documents']) > 0)
 				{
-					if($lines == $filter['limit'])
+					foreach($resultList['documents'] as $variation)
 					{
-						$limitReached = true;
-						break;
-					}
+						if($lines == $filter['limit'])
+						{
+							$limitReached = true;
+							break;
+						}
 
-					if(is_array($resultList['documents']) && count($resultList['documents']) > 0)
-					{
 						if($this->elasticExportStockHelper->isFilteredByStock($variation, $filter) === true)
 						{
 							continue;
@@ -165,16 +170,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 			$currency = $priceList['currency'];
 		}
 
-		$deliveryCost = $this->elasticExportHelper->getShippingCost($variation['data']['item']['id'], $settings);
-
-		if(!is_null($deliveryCost))
-		{
-			$deliveryCost = number_format((float)$deliveryCost, 2, ',', '');
-		}
-		else
-		{
-			$deliveryCost = '';
-		}
+		$deliveryCost = $this->getDeliveryCost($variation, $settings);
 
 		$imageUrl = $this->getImage($variation, $settings);
 
@@ -195,6 +191,40 @@ class PreisRoboterDE extends CSVPluginGenerator
 		];
 
 		$this->addCSVContent(array_values($row));
+	}
+
+	/**
+	 * Get the delivery cost.
+	 *
+	 * @param $variation
+	 * @param $settings
+	 * @return float|mixed|null|string
+	 */
+	private function getDeliveryCost($variation, $settings)
+	{
+		if(!array_key_exists($variation['data']['item']['id'], $this->deliveryCostCache))
+		{
+			$this->deliveryCostCache = array();
+
+			$deliveryCost = $this->elasticExportHelper->getShippingCost($variation['data']['item']['id'], $settings);
+
+			if(!is_null($deliveryCost))
+			{
+				$deliveryCost = number_format((float)$deliveryCost, 2, ',', '');
+			}
+			else
+			{
+				$deliveryCost = '';
+			}
+
+			$this->deliveryCostCache[$variation['data']['item']['id']] = $deliveryCost;
+		}
+		else
+		{
+			$deliveryCost = $this->deliveryCostCache[$variation['data']['item']['id']];
+		}
+
+		return $deliveryCost;
 	}
 
 	private function getImage($variation, $settings)
