@@ -145,7 +145,7 @@ In der folgenden Tabelle finden Sie Hinweise zu den Einstellungen, Formateinstel
             art_number
         </td>
         <td>
-            <b>Inhalt:</b> Die <b>Item-ID</b> der Variante.
+            <b>Inhalt:</b> Die <b>Artikel-ID</b> der Variante.
         </td>        
     </tr>
     <tr>
@@ -217,7 +217,7 @@ In der folgenden Tabelle finden Sie Hinweise zu den Einstellungen, Formateinstel
 			art_pzn
 		</td>
 		<td>
-			<b>Inhalt:</b> Leer.
+			<b>Inhalt:</b> Leer
 		</td>        
 	</tr>
 	<tr>
@@ -225,7 +225,7 @@ In der folgenden Tabelle finden Sie Hinweise zu den Einstellungen, Formateinstel
 			art_producer
 		</td>
 		<td>
-			<b>Inhalt:</b> Der <b>Name des Herstellers</b> des Artikels. Der <b>Externe Name</b> unter <b>Einstellungen » Artikel » Hersteller</b> wird priorisiert, wenn vorhanden.
+			<b>Inhalt:</b> Der <b>Hersteller</b> des Artikels. Der <b>Externe Name</b> unter <b>Einstellungen » Artikel » Hersteller</b> wird priorisiert, wenn vorhanden.
 		</td>        
 	</tr>
 	<tr>
