@@ -10,8 +10,8 @@
   "pluginIcon": "icon_plugin_md.png",
   "price": 0.00,
   "shortDescription": {
-    "de": "Die Integration des Datenformats PreisRoboterDE-Plugin ermöglicht die Artikeldatenübertragung zum Preisportal preisroboter.de über den elastischen Export.",
-    "en": "The integration of the data format PreisRoboterDE-Plugin enables the transfer of item data to the price search engine preisroboter.de via the elastic export."
+    "de": "Die Integration des Datenformats PreisRoboterDE-Plugin ermöglicht die Artikeldatenübertragung zum Preisportal PREISROBOTER.de über den elastischen Export.",
+    "en": "The integration of the data format PreisRoboterDE-Plugin enables the transfer of item data to the price search engine PREISROBOTER.de via the elastic export."
   },
   "categories": [
     "3523"
@@ -19,7 +19,7 @@
   "version": "1.0.9",
   "require": ["ElasticExport"],
   "marketplaceName": {
-    "de":"preisroboter.de",
-    "en":"preisroboter.de"
+    "de":"PREISROBOTER.de",
+    "en":"PREISROBOTER.de"
   }
 }
