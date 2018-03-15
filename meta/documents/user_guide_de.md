@@ -40,7 +40,7 @@ In der folgenden Tabelle finden Sie Hinweise zu den einzelnen Formateinstellunge
 | **Produkt-URL**                                     | Wählen, ob die URL des Artikels oder der Variante an das Preisportal übertragen wird. Varianten URLs können nur in Kombination mit dem Ceres Webshop übertragen werden. |
 | **Mandant**                                         | Mandant wählen. Diese Einstellung wird für den URL-Aufbau verwendet. |
 | **URL-Parameter**                                   | Suffix für die Produkt-URL eingeben, wenn dies für den Export erforderlich ist. Die Produkt-URL wird dann um die eingegebene Zeichenkette erweitert, wenn weiter oben die Option **übertragen** für die Produkt-URL aktiviert wurde. |
-| **Auftragsherkunft**                                | Die Auftragsherkunft wählen, die beim Auftragsimport zugeordnet werden soll. |
+| **Auftragsherkunft**                                | Aus der Dropdown-Liste die Auftragsherkunft wählen, die beim Auftragsimport zugeordnet werden soll. |
 | **Marktplatzkonto**                                 | Marktplatzkonto aus der Dropdown-Liste wählen. Die Produkt-URL wird um die gewählte Auftragsherkunft erweitert, damit die Verkäufe später analysiert werden können. |
 | **Sprache**                                         | Sprache aus der Dropdown-Liste wählen. |
 | **Artikelname**                                     | **Name 1**, **Name 2** oder **Name 3** wählen. Die Namen sind im Tab **Texte** eines Artikels gespeichert.<br/> Im Feld **Maximale Zeichenlänge (def. Text)** optional eine Zahl eingeben, wenn die Preissuchmaschine eine Begrenzung der Länge des Artikelnamen beim Export vorgibt. |
@@ -48,14 +48,14 @@ In der folgenden Tabelle finden Sie Hinweise zu den einzelnen Formateinstellunge
 | **Beschreibung**                                    | Wählen, welcher Text als Beschreibungstext übertragen werden soll.<br/> Im Feld **Maximale Zeichenlänge (def. Text)** optional eine Zahl eingeben, wenn die Preissuchmaschine eine Begrenzung der Länge der Beschreibung beim Export vorgibt.<br/> Option **HTML-Tags entfernen** aktivieren, damit die HTML-Tags beim Export entfernt werden.<br/> Im Feld **Erlaubte HTML-Tags, kommagetrennt (def. Text)** optional die HTML-Tags eingeben, die beim Export erlaubt sind. Wenn mehrere Tags eingegeben werden, mit Komma trennen. |
 | **Zielland**                                        | Zielland aus der Dropdown-Liste wählen. |
 | **Barcode**                                         | ASIN, ISBN oder eine EAN aus der Dropdown-Liste wählen. Der gewählte Barcode muss mit der oben gewählten Auftragsherkunft verknüpft sein. Andernfalls wird der Barcode nicht exportiert. |
-| **Bild**                                            | **Position 0** oder **Erstes Bild** wählen, um dieses Bild zu exportieren.<br/> **Position 0** = Ein Bild mit der Position 0 wird übertragen.<br/> **Erstes Bild** = Das erste Bild wird übertragen. Position des Energieetikettes eintragen. Alle Bilder die als Energieetikette übertragen werden sollen, müssen diese Position haben. |
-| **Bildposition des Energieetiketts**                | Diese Option ist für dieses Format nicht relevant. |
+| **Bild**                                            | **Position 0** oder **Erstes Bild** wählen, um dieses Bild zu exportieren.<br/> **Position 0** = Ein Bild mit der Position 0 wird übertragen.<br/> **Erstes Bild** = Das erste Bild wird übertragen. |
+| **Bildposition des Energieetiketts**                | Position des Energieetikettes eintragen. Alle Bilder die als Energieetikette übertragen werden sollen, müssen diese Position haben. |
 | **Bestandspuffer**                                  | Diese Option ist für dieses Format nicht relevant. |
 | **Bestand für Varianten ohne Bestandsbeschränkung** | Diese Option ist für dieses Format nicht relevant. |
 | **Bestand für Varianten ohne Bestandsführung**      | Diese Option ist für dieses Format nicht relevant. |
 | **Verkaufspreis**                                   | Brutto- oder Nettopreis aus der Dropdown-Liste wählen. |
 | **Angebotspreis**                                   | Diese Option ist für dieses Format nicht relevant. |
-| **UVP**                                             | Diese Option ist für dieses Format nicht relevant. |
+| **UVP**                                             | Aktivieren, um den UVP zu übertragen. |
 | **Versandkosten**                                   | Aktivieren, damit die Versandkosten aus der Konfiguration übernommen werden. Wenn die Option aktiviert ist, stehen in den beiden Dropdown-Listen Optionen für die Konfiguration und die Zahlungsart zur Verfügung. Option **Pauschale Versandkosten übertragen** aktivieren, damit die pauschalen Versandkosten übertragen werden. Wenn diese Option aktiviert ist, muss im Feld darunter ein Betrag eingegeben werden. |
 | **MwSt.-Hinweis**                                   | Diese Option ist für dieses Format nicht relevant. |
 | **Artikelverfügbarkeit überschreiben**              | Diese Option ist für dieses Format nicht relevant. |
@@ -70,8 +70,8 @@ _Tab. 1: Settings for the data format **PreisRoboterDE-Plugin**_
 | art_name               | Der **Artikelname** entsprechend der Formateinstellung **Artikelname**. |
 | art_price              | Der **Verkaufspreis** der Variante entsprechend den Formateinstellungen **Mandant** und **Auftragsherkunft**. |
 | art_url                | Der **URL-Pfad** des Artikels abhängig von den Formateinstellungen **Mandant**, **Auftragsherkunft** und **Produkt-URL**. |
-| art_img_url	         | URL zu dem Bild gemäß der Formateinstellungen **Bild**. Variantenbilder werden vor Artikelbildern priorisiert. |
-| art_description        | Die Beschreibung des Artikels entsprechend der Formateinstellung **Beschreibung**. |
+| art_img_url	         | URL des Bildes gemäß der Formateinstellungen **Bild**. Variantenbilder werden vor Artikelbildern priorisiert. |
+| art_description        | Entsprechend der Formateinstellung **Beschreibung**. |
 | art_versandkosten      | Entsprechend der Formateinstellung **Versandkosten**. |
 | art_lieferzeit         | Der **Name der Artikelverfügbarkeit** unter **Einstellungen » Artikel » Artikelverfügbarkeit** oder die Übersetzung gemäß der Formateinstellung **Artikelverfügbarkeit überschreiben**. |
 | art_ean_code           | Entsprechend der Formateinstellung **Barcode**. |
