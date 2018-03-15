@@ -9,7 +9,7 @@ PreisRoboter.de is a product and price search engine that offers full text searc
 
 ## 2 Setting up the data format PreisRoboterDE-Plugin in plentymarkets
 
-By installing this plugin you will receive the export format **PreisRoboterDE-Plugin**. Use this format to exchange data between plentymarkets and PreisRoboter.de. It is required to install the Plugin Elastic export from the plentyMarketplace first before you can use the format **PreisRoboterDE-Plugin** in plentymarkets.
+By installing this plugin you will receive the export format **PreisRoboterDE-Plugin**. Use this format to exchange data between plentymarkets and PreisRoboter.de. It is required to install the Plugin **Elastic Export** from the plentyMarketplace first before you can use the format **PreisRoboterDE-Plugin** in plentymarkets.
 
 Once both plugins are installed, you can create the export format **PreisRoboterDE-Plugin**. Refer to the [Exporting data formats for price search engines](https://knowledge.plentymarkets.com/en/basics/data-exchange/exporting-data#30) page of the manual for further details about the individual format settings.
 
