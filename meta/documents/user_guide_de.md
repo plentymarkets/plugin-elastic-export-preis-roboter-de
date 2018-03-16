@@ -58,9 +58,9 @@ In der folgenden Tabelle finden Sie Hinweise zu den einzelnen Formateinstellunge
 | **UVP**                                             | Aktivieren, um den UVP zu übertragen. |
 | **Versandkosten**                                   | Aktivieren, damit die Versandkosten aus der Konfiguration übernommen werden. Wenn die Option aktiviert ist, stehen in den beiden Dropdown-Listen Optionen für die Konfiguration und die Zahlungsart zur Verfügung. Option **Pauschale Versandkosten übertragen** aktivieren, damit die pauschalen Versandkosten übertragen werden. Wenn diese Option aktiviert ist, muss im Feld darunter ein Betrag eingegeben werden. |
 | **MwSt.-Hinweis**                                   | Diese Option ist für dieses Format nicht relevant. |
-| **Artikelverfügbarkeit überschreiben**              | Diese Option ist für dieses Format nicht relevant. |
+| **Artikelverfügbarkeit**                            | Option **überschreiben** aktivieren und in die Felder **1** bis **10**, die die ID der Verfügbarkeit darstellen, Artikelverfügbarkeiten< eintragen. Somit werden die Artikelverfügbarkeiten, die im Menü **System » Artikel » Verfügbarkeit** eingestellt wurden, überschrieben. |
        
-_Tab. 1: Settings for the data format **PreisRoboterDE-Plugin**_
+_Tab. 1: Einstellungen für das Datenformat **PreisRoboterDE-Plugin**_
 
 ## 3 Verfügbare Spalten der Exportdatei
 
