@@ -59,7 +59,7 @@ The following table lists details for settings, format settings and recommended 
 | **RRP**                                               | Activate to transfer the RRP. |
 | **Shipping costs**                                    | Activate this option if you want to use the shipping costs that are saved in a configuration. If this option is activated, then you will be able to select the configuration and the payment method from the drop-down lists.<br/> Activate the option **Transfer flat rate shipping charge** if you want to use a fixed shipping charge. If this option is activated, a value has to be entered in the line underneath. |
 | **VAT note**                                          | This option does not affect this format. |
-| **Overwrite item availability**                       | This option does not affect this format. |
+| **Item availability**                                 | Activate the **overwrite** option and enter item availabilities into the fields **1** to **10**. The fields represent the IDs of the availabilities. This will overwrite the item availabilities that are saved in the menu **System » Item » Availability**. |
        
 _Tab. 1: Settings for the data format **PreisRoboterDE-Plugin**_
 
