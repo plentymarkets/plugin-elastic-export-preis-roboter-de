@@ -29,7 +29,7 @@ The following table lists details for settings, format settings and recommended 
 | **Settings**                                          |
 | **Name**                                              | Enter a name. The export format will be listed under this name in the overview within the **Exports** tab. |
 | **Type**                                              | Select the type **Item** from the drop-down list. |
-| **Format**                                            | Choose **PreisRoboterDE-Plugin**. |
+| **Format**                                            | Select **PreisRoboterDE-Plugin**. |
 | **Limit**                                             | Enter a number. If you want to transfer more than 9,999 data records to the price search engine, then the output file will not be generated again for another 24 hours. This is to save resources. If more than 9,999 data records are necessary, the setting **Generate cache file** has to be active. |
 | **Generate cache file**                               | Place a check mark if you want to transfer more than 9,999 data records to the price search engine. The output file will not be generated again for another 24 hours. We recommend not to activate this setting for more than 20 export formats. This is to save resources. |
 | **Provisioning**                                      | Select **URL**. This option generates a token for authentication in order to allow external access. |
@@ -41,7 +41,7 @@ The following table lists details for settings, format settings and recommended 
 | **Product URL**                                       | Choose wich URL should be transferred to the price comparison portal, the item’s URL or the variation’s URL. Variation SKUs can only be transferred in combination with the Ceres store. |
 | **Client**                                            | Select a client. This setting is used for the URL structure. |
 | **URL parameter**                                     | Enter a suffix for the product URL if this is required for the export. If you have activated the transfer option for the product URL further up, then this character string will be added to the product URL. |
-| **Order referrer**                                    | Choose the order referrer that should be assigned during the order import from the drop-down list. |
+| **Order referrer**                                    | Select the order referrer that should be assigned during the order import. |
 | **Market account**                                    | Select the market account from the drop-down list. The selected referrer is added to the product URL so that sales can be analysed later. |
 | **Language**                                          | Select the language from the drop-down list. |
 | **Item name**                                         | Select **Name 1**, **Name 2** or **Name 3**. These names are saved in the **Texts** tab of the item. Enter a number into the **Maximum number of characters (def. Text)** field if desired. This specifies how many characters should be exported for the item name. |
@@ -49,14 +49,14 @@ The following table lists details for settings, format settings and recommended 
 | **Description**                                       | Select the text that you want to transfer as description.<br/> Enter a number into the **Maximum number of characters (def. text)** field if desired. This specifies how many characters should be exported for the description.<br/> Activate the option **Remove HTML tags** if you want HTML tags to be removed during the export. If you only want to allow specific HTML tags to be exported, then enter these tags into the field **Permitted HTML tags, separated by comma (def. Text)**. Use commas to separate multiple tags. |
 | **Target country**                                    | Select the target country from the drop-down list. |
 | **Barcode**                                           | Select the ASIN, ISBN or an EAN from the drop-down list. The barcode has to be linked to the order referrer selected above. If the barcode is not linked to the order referrer it will not be exported. |
-| **Image**                                             | Select **Position 0** or **First image** to export this image.<br/> **Position 0** = An image with position 0 will be transferred.<br/> **First image** = The first image will be transferred. |
+| **Image**                                             | Select **First image**. |
 | **Image position of the energy efficiency label**     | Enter the position. Every image that should be transferred as an energy efficiency label must have this position. |
 | **Stockbuffer**                                       | This option does not affect this format. |
 | **Stock for variations without stock limitation**     | This option does not affect this format. |
 | **Stock for variations with no stock administration** | This option does not affect this format. |
 | **Retail price**                                      | Select gross price or net price from the drop-down list. |
 | **Offer price**                                       | This option does not affect this format. |
-| **RRP**                                               | Activate to transfer the RRP. |
+| **RRP**                                               | This option does not affect this format. |
 | **Shipping costs**                                    | Activate this option if you want to use the shipping costs that are saved in a configuration. If this option is activated, then you will be able to select the configuration and the payment method from the drop-down lists.<br/> Activate the option **Transfer flat rate shipping charge** if you want to use a fixed shipping charge. If this option is activated, a value has to be entered in the line underneath. |
 | **VAT note**                                          | This option does not affect this format. |
 | **Item availability**                                 | Activate the **overwrite** option and enter item availabilities into the fields **1** to **10**. The fields represent the IDs of the availabilities. This will overwrite the item availabilities that are saved in the menu **System » Item » Availability**. |
