@@ -3,8 +3,7 @@
 ## v1.0.10 (2018-03-19)
 
 ### Added
-- Information was added to the tables in the user guide.
-- An info tab was added.
+- The tables in the user guide were adjusted.
 
 ## v1.0.9 (2018-02-16)
 

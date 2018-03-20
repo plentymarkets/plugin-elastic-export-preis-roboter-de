@@ -3,8 +3,7 @@
 ## v1.0.10 (2018-03-19)
 
 ### Hinzugefügt
-- Die Tabellen im User Guide wurden ergänzt.
-- Ein Info-Tab wurde hinzugefügt.
+- Die Tabellen im User Guide wurden angepasst.
 
 ## v1.0.9 (2018-02-16)
 
