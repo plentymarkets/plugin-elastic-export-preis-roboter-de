@@ -1,5 +1,11 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
+## v1.0.11 (2018-04-25)
+
+### Geändert
+- Die Filtrierung der Varianten wird durch die Klasse FiltrationService vorgenommen.
+- Vorschaubilder aktualisiert.
+
 ## v1.0.10 (2018-03-22)
 
 ### Hinzugefügt
