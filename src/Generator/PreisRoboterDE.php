@@ -5,6 +5,7 @@ namespace ElasticExportPreisRoboterDE\Generator;
 use ElasticExport\Helper\ElasticExportCoreHelper;
 use ElasticExport\Helper\ElasticExportPriceHelper;
 use ElasticExport\Helper\ElasticExportStockHelper;
+use ElasticExport\Services\FiltrationService;
 use Plenty\Modules\DataExchange\Contracts\CSVPluginGenerator;
 use Plenty\Modules\DataExchange\Models\FormatSetting;
 use Plenty\Modules\Helper\Services\ArrayHelper;
@@ -49,6 +50,11 @@ class PreisRoboterDE extends CSVPluginGenerator
     private $deliveryCostCache;
 
     /**
+     * @var FiltrationService
+     */
+    private $filtrationService;
+
+    /**
      * PreisRoboterDE constructor.
      * @param ArrayHelper $arrayHelper
      */
@@ -73,6 +79,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 
 		//convert settings to array
 		$settings = $this->arrayHelper->buildMapFromObjectList($formatSettings, 'key', 'value');
+        $this->filtrationService = pluginApp(FiltrationService::class, [$settings, $filter]);
 
 		$this->setHeader();
 
@@ -106,7 +113,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 							break;
 						}
 
-						if($this->elasticExportStockHelper->isFilteredByStock($variation, $filter) === true)
+						if($this->filtrationService->filter($variation))
 						{
 							continue;
 						}

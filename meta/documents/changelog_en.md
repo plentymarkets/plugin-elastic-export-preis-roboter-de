@@ -1,5 +1,11 @@
 # Release Notes for Elastic Export PreisRoboter.de
 
+## v1.0.11 (2018-04-25)
+
+### Changed
+- The class FiltrationService is responsible for the filtration of all variations.
+- Preview images updated.
+
 ## v1.0.10 (2018-03-22)
 
 ### Added
