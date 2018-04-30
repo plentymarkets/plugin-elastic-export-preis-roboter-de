@@ -79,7 +79,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 
 		//convert settings to array
 		$settings = $this->arrayHelper->buildMapFromObjectList($formatSettings, 'key', 'value');
-        $this->filtrationService = pluginApp(FiltrationService::class, [$settings, $filter]);
+		$this->filtrationService = pluginApp(FiltrationService::class, ['settings' => $settings, 'filterSettings' => $filter]);
 
 		$this->setHeader();
 
