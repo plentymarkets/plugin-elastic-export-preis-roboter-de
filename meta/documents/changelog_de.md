@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
+## v1.0.14 (2018-10-10)
+
+### Behoben
+- Alle Namen werden richtig exportiert, abhängig von den Einstellungen.
+
 ## v1.0.13 (2018-07-12)
 
 ### Geändert
