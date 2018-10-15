@@ -3,7 +3,7 @@
 ## v1.0.14 (2018-10-10)
 
 ### Fixed
-- All names are exported correctly, depending on the set setting.
+- All names are exported correctly, depending on the settings.
 
 ## v1.0.13 (2018-07-12)
 
