@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export PreisRoboter.de
 
+## v1.0.15 (2019-01-23)
+
+### Geändert
+- Ein fehlerhafter Link im User Guide wurde korrigiert.
+
 ## v1.0.14 (2018-10-10)
 
 ### Behoben
