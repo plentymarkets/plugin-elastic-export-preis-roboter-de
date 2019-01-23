@@ -14,9 +14,9 @@
     "en": "The integration of the data format PreisRoboterDE-Plugin enables the transfer of item data to the price search engine PREISROBOTER.de via the elastic export."
   },
   "categories": [
-    "3523"
+    "3880"
   ],
-  "version": "1.0.14",
+  "version": "1.0.15",
   "require": ["ElasticExport"],
   "marketplaceName": {
     "de":"PREISROBOTER.de",
