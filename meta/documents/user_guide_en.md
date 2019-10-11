@@ -11,15 +11,15 @@ PreisRoboter.de is a product and price search engine that offers full text searc
 
 By installing this plugin you will receive the export format **PreisRoboterDE-Plugin**. Use this format to exchange data between plentymarkets and PreisRoboter.de. It is required to install the Plugin **Elastic Export** from the plentyMarketplace first before you can use the format **PreisRoboterDE-Plugin** in plentymarkets.
 
-Once both plugins are installed, you can create the export format **PreisRoboterDE-Plugin**. Refer to the [Elastic Export](https://knowledge.plentymarkets.com/en/basics/data-exchange/elastic-export) page of the manual for further details about the individual format settings.
+Once both plugins are installed, you can create the export format **PreisRoboterDE-Plugin**. Refer to the [Elastic Export](https://knowledge.plentymarkets.com/en/data/exporting-data/elastic-export) page of the manual for further details about the individual format settings.
 
 Creating a new export format:
 
 1. Go to **Data » Elastic export**.
 2. Click on **New export**.
 3. Carry out the settings as desired. Pay attention to the information given in table 1.
-4. **Save** the settings. 
-→ The export format will be given an ID and it will appear in the overview within the **Exports** tab.
+4. **Save** the settings.<br/> 
+→ The export format is given an ID and it appears in the overview within the **Exports** tab.
 
 
 The following table lists details for settings, format settings and recommended item filters for the format **PreisRoboterDE-Plugin**.
@@ -41,8 +41,8 @@ The following table lists details for settings, format settings and recommended 
 | **Product URL**                                       | Choose wich URL should be transferred to the price comparison portal, the item’s URL or the variation’s URL. Variation SKUs can only be transferred in combination with the Ceres store. |
 | **Client**                                            | Select a client. This setting is used for the URL structure. |
 | **URL parameter**                                     | Enter a suffix for the product URL if this is required for the export. If you have activated the transfer option for the product URL further up, then this character string will be added to the product URL. |
-| **Order referrer**                                    | Select the order referrer that should be assigned during the order import. |
-| **Market account**                                    | Select the market account from the drop-down list. The selected referrer is added to the product URL so that sales can be analysed later. |
+| **Order referrer**                                    | Select the order referrer that should be assigned during the order import. The selected referrer is added to the product URL so that sales can be analysed later. |
+| **Market account**                                    | Select the market account from the drop-down list. |
 | **Language**                                          | Select the language from the drop-down list. |
 | **Item name**                                         | Select **Name 1**, **Name 2** or **Name 3**. These names are saved in the **Texts** tab of the item. Enter a number into the **Maximum number of characters (def. Text)** field if desired. This specifies how many characters should be exported for the item name. |
 | **Preview text**                                      | This option does not affect this format. |
@@ -60,7 +60,7 @@ The following table lists details for settings, format settings and recommended 
 | **RRP**                                               | This option does not affect this format. |
 | **Shipping costs**                                    | Activate this option if you want to use the shipping costs that are saved in a configuration. If this option is activated, then you will be able to select the configuration and the payment method from the drop-down lists.<br/> Activate the option **Transfer flat rate shipping charge** if you want to use a fixed shipping charge. If this option is activated, a value has to be entered in the line underneath. |
 | **VAT note**                                          | This option does not affect this format. |
-| **Item availability**                                 | Activate the **overwrite** option and enter item availabilities into the fields **1** to **10**. The fields represent the IDs of the availabilities. This will overwrite the item availabilities that are saved in the menu **System » Item » Availability**. |
+| **Item availability**                                 | Activate the **overwrite** option and enter item availabilities into the fields **1** to **10**. The fields represent the IDs of the availabilities. This will overwrite the item availabilities that are saved in the menu **Setup » Item » Availability**. |
        
 _Tab. 1: Settings for the data format **PreisRoboterDE-Plugin**_
 
@@ -77,10 +77,10 @@ Go to **Data » Elastic export** and open the data format **PreisRoboterDE-Plugi
 | art_img_url	      | The URL of the image according to the format setting **Image**. Variation images are prioritised over item images. |
 | art_description     | According to the format setting **Description**. |
 | art_versandkosten   | According to the format setting **Shipping costs**. |
-| art_lieferzeit      | The name of the **item availability** under **Settings » Item » Item availability** or the translation according to the format setting **Item availability**. |
+| art_lieferzeit      | The name of the **item availability** under **Setup » Item » Item availability** or the translation according to the format setting **Item availability**. |
 | art_ean_code        | According to the format setting **Barcode**. |
 | art_pzn             | Empty. |
-| art_producer        | The **name of the manufacturer** of the item. The **external name** within **Settings » Items » Manufacturer** is preferred if existing. |
+| art_producer        | The **name of the manufacturer** of the item. The **external name** within **Setup » Items » Manufacturer** is preferred if existing. |
 | art_producer_number | The **Model** of the variation. |
 | art_baseprice       | The **base price information** in the format "price / unit" according to the format setting **Language**. (Example: 10.00 EUR / kilogram) |
 
