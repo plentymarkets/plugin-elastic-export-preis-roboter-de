@@ -103,7 +103,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 					]);
 				}
 
-				if(is_array($resultList['documents']) && count($resultList['documents']) > 0)
+				if(is_array($resultList['documents']) && count($resultList['documents'] ?? []) > 0)
 				{
 					foreach($resultList['documents'] as $variation)
 					{
@@ -238,7 +238,7 @@ class PreisRoboterDE extends CSVPluginGenerator
 	{
 		$imageList = $this->elasticExportHelper->getImageListInOrder($variation, $settings, 1, ElasticExportCoreHelper::VARIATION_IMAGES);
 
-		if(count($imageList))
+		if(count($imageList ?? []))
 		{
 			$imageUrl = $imageList[0];
 			return $imageUrl;
