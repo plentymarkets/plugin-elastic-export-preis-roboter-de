@@ -16,8 +16,10 @@
   "categories": [
     "3880"
   ],
-  "version": "1.0.15",
-  "require": ["ElasticExport"],
+  "version": "1.0.16",
+  "require": {
+    "ElasticExport": ">= 1.6.6"
+  },
   "marketplaceName": {
     "de":"PREISROBOTER.de",
     "en":"PREISROBOTER.de"
